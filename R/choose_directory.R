@@ -66,7 +66,8 @@ select_directory_method <- function() {
       .dir.method = 'RStudioAPI'
       ensure_library('rstudioapi')
     } else if (ensure_library('tcltk') &
-              class(try({tt  <- tktoplevel(); tkdestroy(tt)}, silent = TRUE)) != "try-error") {
+              class(try({
+                tt  <- tcltk::tktoplevel(); tcltk::tkdestroy(tt)}, silent = TRUE)) != "try-error") {
       .dir.method = 'tcltk'
     } else if (ensure_library('gWidgets2') & ensure_library('RGtk2')) {
       .dir.method = 'gWidgets2RGtk2'
