@@ -5,7 +5,7 @@
 \title{Choose files}
 \usage{
 choose_files(initial_dir = getwd(), method = select_directory_method(),
-  title = NULL)
+  title = NULL, multiple = TRUE)
 }
 \arguments{
 \item{initial_dir}{Path to folder from which to display dialog. Default is to use current working directory.}
@@ -13,9 +13,11 @@ choose_files(initial_dir = getwd(), method = select_directory_method(),
 \item{method}{Package to be used to construct the GUI. See `select_directory_method()`}
 
 \item{title}{Character, title of the vector}
+
+\item{multiple}{Boolean, allows for multiple files to be selected. Some GUIs do not allow multiple files.}
 }
 \description{
-These function allows the user to choose a directory interactively. It has been tested on Windows, Ubuntu and macOS. The gist comes from https://stackoverflow.com/questions/48218491/os-independent-way-to-select-directory-interactively-in-r
+This function allows the user to choose file(s) interactively. It has been tested on Windows, Ubuntu and macOS. The gist comes from https://stackoverflow.com/questions/48218491/os-independent-way-to-select-directory-interactively-in-r
 }
 \seealso{
 `select_directory_method()`

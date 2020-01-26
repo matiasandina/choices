@@ -25,9 +25,9 @@ numeric_menu <- function(opts, prompt = NULL){
 
 
 print_options <- function(opts){
-  message("+++++++++++++++++++++++++")
+  message("+++++++++++++++++++++++++++++++")
   message("Please see your options below:")
-  message("+++++++++++++++++++++++++")
+  message("+++++++++++++++++++++++++++++++")
   message(paste0("Option ",
                  seq_len(length(opts)),
                  ") ",

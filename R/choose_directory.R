@@ -40,7 +40,7 @@ choose_directory <- function(initial_dir = getwd(),
 ensure_library <- function(lib_name){
   # Calling installed.packages() many times is slow
   if (!exists(".installed", envir = .GlobalEnv)) {
-    .installed <- installed.packages()
+    .installed <- utils::installed.packages()
     # remember for later
     assign('.installed', .installed, envir = .GlobalEnv)
     }
@@ -71,7 +71,7 @@ select_directory_method <- function() {
       .dir.method = 'tcltk'
     } else if (ensure_library('gWidgets2') & ensure_library('RGtk2')) {
       .dir.method = 'gWidgets2RGtk2'
-    } else if (ensure_library('rJava') & ensure_library('rChoiceDialogs')) {
+      } else if (ensure_library('rJava') & ensure_library('rChoiceDialogs')) {
       .dir.method = 'rChoiceDialogs'
     } else {
       .dir.method = 'console'
