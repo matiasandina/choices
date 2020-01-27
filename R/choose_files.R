@@ -23,13 +23,13 @@ choose_files <- function(initial_dir = getwd(),
     title <- "Choose file(s)"
   }
 
-  if (method == "RStudioAPI") {
+  if (method == "rstudioapi") {
     warning("RStudioAPI does not allow for multiple files.\nIgnoring parameter `multiple`.\nSelect another method using `method` argument in function call.\nSee available methods with `available_methods(FALSE)`")
   }
 
   switch(method,
          'choose.files' = choose.files(default = initial_dir, caption = title, multi = multiple),
-         'RStudioAPI' = rstudioapi::selectFile(path = initial_dir, caption = title),
+         'rstudioapi' = rstudioapi::selectFile(path = initial_dir, caption = title),
          'tcltk' = tk_choose.files(default = initial_dir, caption = title, multi = multiple, filters = NULL, index = 1),
          'rChoiceDialogs' = rChoiceDialogs::rchoose.files(default = initial_dir, caption = title, multi = multiple),
          'gWidgets2RGtk2' = gWidgets2RGtk2::gfile(type = 'open', text = title, initial.dir = initial_dir),

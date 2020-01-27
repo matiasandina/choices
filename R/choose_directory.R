@@ -25,7 +25,7 @@ choose_directory <- function(initial_dir = getwd(),
   # Call function using method
   switch(method,
          'choose.dir' = choose.dir(default = initial_dir, caption = title),
-         'RStudioAPI' = rstudioapi::selectDirectory(path = initial_dir, caption = title),
+         'rstudioapi' = rstudioapi::selectDirectory(path = initial_dir, caption = title),
          'tcltk' = tcltk::tk_choose.dir(default = initial_dir, caption = title),
          'rChoiceDialogs' = rChoiceDialogs::rchoose.dir(default = initial_dir, caption = title),
          'gWidgets2RGtk2' = gWidgets2RGtk2::gfile(type = 'selectdir', text = title, initial.dir = initial_dir),
@@ -63,7 +63,7 @@ select_directory_method <- function() {
     if (exists('utils::choose.dir')) {
       .dir.method = 'choose.dir'
     } else if (rstudioapi::isAvailable() & rstudioapi::getVersion() > '1.1.287') {
-      .dir.method = 'RStudioAPI'
+      .dir.method = 'rstudioapi'
       ensure_library('rstudioapi')
     } else if (ensure_library('tcltk') &
               class(try({
