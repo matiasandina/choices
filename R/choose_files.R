@@ -1,10 +1,10 @@
 #' @title Choose files
-#' @description This function allows the user to choose file(s) interactively. It has been tested on Windows, Ubuntu and macOS. The gist comes from https://stackoverflow.com/questions/48218491/os-independent-way-to-select-directory-interactively-in-r
+#' @description This function allows the user to choose file(s) interactively. It has been tested on Windows, Ubuntu and macOS.
 #' @param initial_dir Path to folder from which to display dialog. Default is to use current working directory.
 #' @param method Package to be used to construct the GUI. See `select_directory_method()`
 #' @param title Character, title of the vector
 #' @param multiple Boolean, allows for multiple files to be selected. Some GUIs do not allow multiple files.
-#' @seealso `select_directory_method()`
+#' @seealso select_directory_method(), choose_directory()
 
 ### Main Function ####
 

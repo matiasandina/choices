@@ -15,5 +15,5 @@ ask_yes_no(prompt, boolean = TRUE)
 This function allows yes/no answers to be returned as TRUE/FALSE or 'y'/'n'. It will prompt user multiple times until a valid response is given.
 }
 \seealso{
-`utils::askYesNo()`
+utils::askYesNo()
 }

@@ -17,8 +17,8 @@ choose_files(initial_dir = getwd(), method = select_directory_method(),
 \item{multiple}{Boolean, allows for multiple files to be selected. Some GUIs do not allow multiple files.}
 }
 \description{
-This function allows the user to choose file(s) interactively. It has been tested on Windows, Ubuntu and macOS. The gist comes from https://stackoverflow.com/questions/48218491/os-independent-way-to-select-directory-interactively-in-r
+This function allows the user to choose file(s) interactively. It has been tested on Windows, Ubuntu and macOS.
 }
 \seealso{
-`select_directory_method()`
+select_directory_method(), choose_directory()
 }

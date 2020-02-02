@@ -1,3 +1,9 @@
+#' @title Numeric menu
+#' @description This function allows the user to create numeric menus with ease for interaction with user. The menu is robust to selecting orders that are not available or are not numbers.
+#' @param opts vector with options to be displayed on the menu
+#' @param prompt character vector with the propmt (default to "Use numbers to select the option").
+#' @usage numeric_menu(c("apple", "banana", "coconut"), "What would you like for dessert?")
+
 
 numeric_menu <- function(opts, prompt = NULL){
 

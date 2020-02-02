@@ -2,7 +2,7 @@
 #' @description This function allows yes/no answers to be returned as TRUE/FALSE or 'y'/'n'. It will prompt user multiple times until a valid response is given.
 #' @param prompt character, prompt to ask the user.
 #' @param boolean boolean, whether to return results as boolean or as 'y/n'.
-#' @seealso `utils::askYesNo()`
+#' @seealso utils::askYesNo()
 
 #' @export
 ask_yes_no <- function(prompt, boolean = TRUE){

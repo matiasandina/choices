@@ -15,8 +15,8 @@ choose_directory(initial_dir = getwd(),
 \item{title}{Character, title of the vector}
 }
 \description{
-This function allows the user to choose a directory interactively. It has been tested on Windows, Ubuntu and macOS. The gist comes from https://stackoverflow.com/questions/48218491/os-independent-way-to-select-directory-interactively-in-r
+This function allows the user to choose a directory interactively. It has been tested on Windows, Ubuntu and macOS. The gist comes from \href{https://stackoverflow.com/questions/48218491/os-independent-way-to-select-directory-interactively-in-r}{this question}.
 }
 \seealso{
-`select_directory_method()`
+select_directory_method()
 }
