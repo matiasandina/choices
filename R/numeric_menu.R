@@ -4,7 +4,7 @@
 #' @param prompt character vector with the propmt (default to "Use numbers to select the option").
 #' @usage numeric_menu(c("apple", "banana", "coconut"), "What would you like for dessert?")
 
-
+#' @export
 numeric_menu <- function(opts, prompt = NULL){
 
   if (is.null(prompt)) {
