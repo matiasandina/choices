@@ -62,9 +62,12 @@ select_directory_method <- function() {
     # otherwise lets try out some options to find the best one that works here
     if (exists('utils::choose.dir')) {
       .dir.method = 'choose.dir'
-    } else if (rstudioapi::isAvailable() & rstudioapi::getVersion() > '1.1.287') {
-      .dir.method = 'rstudioapi'
-      ensure_library('rstudioapi')
+    } else if (rstudioapi::isAvailable()) {
+      # only if the rstudioapi is available check the version
+      if(rstudioapi::getVersion() > '1.1.287'){
+        .dir.method = 'rstudioapi'
+        ensure_library('rstudioapi')
+      }
     } else if (ensure_library('tcltk') &
               class(try({
                 tt  <- tcltk::tktoplevel(); tcltk::tkdestroy(tt)}, silent = TRUE)) != "try-error") {
