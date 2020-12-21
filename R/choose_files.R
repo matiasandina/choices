@@ -30,7 +30,7 @@ choose_files <- function(initial_dir = getwd(),
   switch(method,
          'choose.files' = choose.files(default = initial_dir, caption = title, multi = multiple),
          'rstudioapi' = rstudioapi::selectFile(path = initial_dir, caption = title),
-         'tcltk' = tk_choose.files(default = initial_dir, caption = title, multi = multiple, filters = NULL, index = 1),
+         'tcltk' = tcltk::tk_choose.files(default = initial_dir, caption = title, multi = multiple, filters = NULL, index = 1),
          'rChoiceDialogs' = rChoiceDialogs::rchoose.files(default = initial_dir, caption = title, multi = multiple),
          'gWidgets2RGtk2' = gWidgets2RGtk2::gfile(type = 'open', text = title, initial.dir = initial_dir),
          readline('Please enter file path: ')
